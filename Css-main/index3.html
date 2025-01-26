@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="social">
+        <span>follow On: </span>
+        <ul>
+          <li><a href="#"><i class="fa-brands fa-instagram"></i></li></a>
+          <li>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="title">
+        <h1>Food Cafe</h1>
+      </div>
+      <div class="option">
+        <span class="oicon">
+          <i class="fa-solid fa-language"></i>
+          <select class="language">
+            <option value="english">English</option>
+            <option value="italian">Italian</option>
+            <option value="french">French</option>
+            <option value="spanish">Spanish</option>
+            <option value="polish">Polish</option>
+          </select>
+          <span class="login" onclick="login()">login</span>
+        </span>
+      </div>
+    </header>
+    <nav>
+        <ul>
+          <div class="out">
+            <li><a href="#" onclick="view()">Home</a></li>
+            <div class="in">
+              <ul>
+                <li><a href="#">Home1</a></li>
+                <li><a href="#">Home2</a></li>
+              <li><a href="#">Home3</a></li>
+                <li><a href="#">Home4</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="out">
+            <li><a href="#" onclick="view1()">About Us</a></li>
+            <div class="in">
+              <ul>
+                <li><a href="#">About Us1</a></li>
+                <li><a href="#">About Us2</a></li>
+                <li><a href="#">About Us3</a></li>
+                <li><a href="#">About Us4</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="out">
+            <li><a href="#" onclick="view2()">Service</a></li>
+            <div class="in">
+              <ul>
+                <li><a href="#">Service1</a></li>
+                <li><a href="#">Service2</a></li>
+                <li><a href="#">Service3</a></li>
+                <li><a href="#">Service4</a></li>
+              </ul>
+            </div>
+          </div>
+        </ul>
+    </nav>
+    <div class="ming">
+      <div class="img">
+        <img src="./images/banner-1.jpg" class="active" id="img1">
+        <img src="./images/banner-2.jpg" id="img2">
+        <img src="./images/banner-3.jpg" id="img3">
+      </div>
+      <button id="prev" onclick="prev()">&lt;</button>
+      <button id="next" onclick="next()">&gt;</button>
+    </div>
+    <section class="service">
+        <div class="container">
+            <div class="sbtn">
+                <button onclick="show()">Home</button>
+                <button onclick="show1()">Service</button>
+                <button onclick="show2()">Contact</button>
+            </div>
+            <div class="simg" >
+                <img  id="simg" src="./images/tab-1.jpg">
+            </div>
+        </div>
+    </section>
+    <section class="fmenu">
+      <div class="fcontainer">
+        <div class="fbtn">
+          <button onclick="coffee()">Coffee</button>
+          <button onclick="cold()">Cold Drinks</button>
+          <button onclick="fast()">Fast Food</button>
+          <button onclick="tea()">Tea</button>
+          <button onclick="all()">All</button>
+        </div>
+        <div class="fimage">
+          <div class="table">
+            <div class="card1">
+              <img class="coffee" src="./images/coffee-1.jpg" class="coffee">
+              <h4>Cappuccino</h1>
+            </div>
+            <div class="card1">
+              <img class="coffee" src="./images/coffee-2.jpg" class="coffee">
+              <h4>Expresso</h1>
+            </div>
+            <div class="card1">
+              <img class="coffee" src="./images/coffee-3.jpg" class="coffee">
+              <h4>Caffe Latte</h1>
+            </div>
+            <div class="card1">
+              <img class="coffee" src="./images/coffee-4.jpg"
+              class="coffee">
+              <h4>Cold Brew</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="con">
+        <h2>Get in touch</h2>
+        <form onsubmit="return validateForm1()">
+          <input type="text" placeholder="Name" id="name2">
+          <p id="name3" style="color: red;"></p>
+          <input type="text" placeholder="Email" id="email2">
+          <p id="email3" style="color: red;"></p>
+          <input type="text" placeholder="Password" id="password2">
+          <p id="password3" style="color: red;"></p>
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="focontainer">
+        <button>Our Story</button>
+        <button>Mission</button>
+        <button>Vision</button>
+        <img src="" alt="">
+      </div>
+    </footer>
+    <div class="form">
+      <div class="contain">
+        <h1>Login</h1>
+        <div class="cross" onclick="cross()">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <form>
+          <div class="email">
+            <input type="text" placeholder="Email" class="email1"
+            id="email1"
+            onkeyup="email()">
+          </div>
+          <div class="password">
+            <input type="text" placeholder="Password"
+            class="password1"
+            id="password1"
+            onkeyup="password()">
+          </div>
+          <p id="error" style="color: red"></p>
+          <br /><br />
+          <button type="submit" onclick="return validateForm()" class="submit1">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

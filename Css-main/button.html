@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Image Source</title>
+    <script type="text/javascript">
+      function changeImage() {
+        document.getElementById("homeImage").src = "./images/tab-2.jpg";
+      }
+      function show() {
+        document.getElementById("homeImage").src = "./images/tab-3.jpg";
+      }
+    </script>
+  </head>
+  <body>
+    <li><a href="#" id="home" onclick="changeImage()">Home</a></li>
+    <img id="homeImage" src="./images/tab-1.jpg" alt="Tab 1 Image" />
+
+    <li><a href="#" onclick="show()">Show</a></li>
+  </body>
+</html>

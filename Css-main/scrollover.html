@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .main{
+        height: 4000px;
+        background-color: burlywood;
+
+        .circle{
+            background-color: aqua;
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            height: 150px;
+            width: 150px;
+            border-radius: 100%;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <div class="circle" id="demo"></div>
+    </div>
+  </body>
+
+  <script>
+    window.addEventListener("scroll", show);
+
+    function show() {
+      const header = document.getElementById("demo");
+      if (window.scrollY > 200) {
+        header.style.backgroundColor = "black";
+      } else {
+        header.style.backgroundColor = "pink";
+      }
+    }
+  </script>
+</html>
